@@ -5,12 +5,15 @@
         public static void Main(string[] args)
         {
 
-            QueueLinkedList queue = new QueueLinkedList();
-            queue.Enqueue(56);
-            queue.Enqueue(30);
-            queue.Enqueue(70);
-            queue.Display();
-
+            DequeueElements dequeue = new DequeueElements();
+            dequeue.Enqueue(56);
+            dequeue.Enqueue(30);
+            dequeue.Enqueue(70);
+            dequeue.Display();
+            while (!dequeue.IsEmpty())
+            {
+                dequeue.Dequeue();
+            }
         }
     }
 }

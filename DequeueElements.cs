@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StackAndQueue
 {
-    public class QueueLinkedList
+    public class DequeueElements
     {
         Node last;
         Node first;
-        public QueueLinkedList()
+        public DequeueElements()
         {
             this.last = null;
             this.first = null;
@@ -18,7 +18,7 @@ namespace StackAndQueue
         public void Enqueue(int data)
         {
             Node node = new Node(data);
-
+            //no first node added to list
             if (this.last == null || this.first == null)
             {
                 this.last = node;
@@ -27,6 +27,7 @@ namespace StackAndQueue
             else
             {
                 last.next = node;
+                //node.prev = last;
                 last = node;
             }
             Console.WriteLine("{0} data is inserted \n", node.data);
@@ -46,7 +47,6 @@ namespace StackAndQueue
                 temp = temp.next;
             }
         }
-
         public void Dequeue()
         {
             if (first == null)
