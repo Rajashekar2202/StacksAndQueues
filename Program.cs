@@ -4,11 +4,17 @@
     {
         public static void Main(string[] args)
         {
-            LinkedList stack = new LinkedList();
-            stack.Push(56);
-            stack.Push(30);
-            stack.Push(70);
-            stack.Display();
+
+            PeakAndPopStack peakAndPopStack = new PeakAndPopStack();
+            peakAndPopStack.Push(56);
+            peakAndPopStack.Push(30);
+            peakAndPopStack.Push(70);
+            peakAndPopStack.Display();
+            while (!peakAndPopStack.IsEmpty())
+            {
+                peakAndPopStack.Peek();
+                peakAndPopStack.Pop();
+            }
         }
     }
 }
